@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+nav {
+  padding: 0 1rem;
+}
+.content {
+  min-height: calc(100vh - 134px);
+  padding: 1.5rem 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand-logo::before {
+  content: url(logo.png);
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.goods {
+  display: flex;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 10px;  
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 5;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.cart-list-wrap {
+  width: 600px; 
+  max-width: 95%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); 
+  animation: show 0.5s ease-in-out;
+  overflow: auto;
+  box-shadow: 20px 20px 20px 10px rgb(0 0 0 / 24%), 10px 30px 10px -20px rgb(0 0 0 / 24%), 10px 10px 50px 0 rgb(0 0 0 / 40%);
+  max-height: 80%;
+}
+.collection {
+  margin: 0;
+}
+.collection-item {
+  display: flex;
+  flex-direction: column;  
+}
+.collection-item .item:nth-child(1) {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.collection-item .item:nth-child(2) {
+  width: 100%;
+}
+
+.secondary-content {
+  cursor: pointer;
+}
+.cart-close {
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.minus {
+  margin-left: 10px;
+}
+.plus {
+  margin-right: 10px;
+}
+.quantity {
+  padding: 0 16px;   
+}
+
+
+.toast-container {
+  top: unset;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  animation: fade-in 0.5s ease-in-out;
+}
+.toast {
+  top: 0;
+}
+
+@media (min-width: 767px) {
+  .cart {
+    top: 6rem;
+    bottom: unset;
+  }
+  .toast-container {    
+    top: 5rem;
+    right: 5rem;
+    left: unset;
+    position: fixed;    
+  }  
+  .collection-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+  }
+}
+@keyframes show {
+  from {
+    top: 70%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);        
+    opacity: 1;
+  }
+}

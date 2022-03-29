@@ -1,3 +1,3 @@
 # React Shop Portfolio Project
 
-[Demo](https://Yulya163.github.io/react-shop)
+[Demo](https://Yulya163.github.io/shop-project)

@@ -7,4 +7,4 @@ The project used:
 - [Materialize](https://materializecss.com) - a modern responsive front-end framework based on Material Design.
 
 The same project created without the help of hooks useContext, useReducer:
-[react-shop](https://github.com/Yulya163/react-shop)
+[react-shop](https://github.com/Yulya163/shop-project)
